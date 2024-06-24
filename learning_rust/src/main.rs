@@ -449,10 +449,21 @@ fn main() {
     println!("Enter a number");
     let mut some_num = String::new();
 
-    std::io::stdio()
+    std::io::stdin()
     .read_line(&mut some_num)
-    .expect("failed to read input")
+    .expect("failed to read input");
     
+    let some_num: i32 = some_num.trim().parse().expect("invaild input");
+    
+    if some_num != 0 {
+        if some_num %2 == 0 {
+            println!("The number is even");
+        } else {
+            println!("The number is odd");
+        }
+    } else {
+        println!{"The number is 0"};
+    }
 
 }
 
