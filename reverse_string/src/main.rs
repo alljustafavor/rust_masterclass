@@ -31,7 +31,7 @@ fn input() -> char {
 }
 
 fn main() {
-    let input_string: String = String::from("Welcome to rust");
+    let input_string: String = String::from("welcome to rust");
     let input_size = input_string.len();
     let mut stack = new_stack(input_size);
     let mut reversed_str = String::new();
